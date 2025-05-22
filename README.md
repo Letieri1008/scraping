@@ -1,4 +1,4 @@
-# scraping
+scraping
 Web Scraping python exempla
 
 - Coleta de dados automática
@@ -16,17 +16,11 @@ todos_livros = []  # Initialize the list
 
 #status códigos de HTTP:
 
-#200 → ✅ Sucesso! A página foi encontrada e o conteúdo foi entregue.
-#301 → 🔁 Redirecionamento.
-#403 → ⛔ Proibido (o site bloqueou a requisição).
-#404 → ❌ Não encontrado (a página não existe).
-#500 → ⚠️ Erro interno do servidor.
-
 if response.status_code == 200: 
     soup = BeautifulSoup(response.text, 'html.parser')
     print(soup.prettify()) #mostrando html formatado
     
-    #Extraindo informações
+    Extraindo informações
 
     livros = soup.find_all('article', class_='product_pod')
     
